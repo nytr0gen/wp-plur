@@ -1,0 +1,14 @@
+$bgColor:    #fff;
+$altBgColor: #ddd;
+
+$textColor: #2f2f2f;
+$invText:   invert($textColor);
+
+$colorAlpha: #1391c1;// http://goo.gl/WIuMEO
+$colorBeta:  shade($colorAlpha, 15%);
+$colorGamma: #f6ec49;
+
+$colorAccent: #f43059;
+
+$post_headColor: darken(invert($textColor), 10%);
+$post_headHover: $textColor;

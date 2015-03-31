@@ -1,0 +1,60 @@
+.lt-header {
+    height: rhythm(3);
+
+    @extend .group;
+
+    background: #000;
+    @include background-image(
+        linear-gradient(to bottom, #0f0f0f 0%, #000000 100%)
+    );
+
+    color: #fff;
+
+    @include trailer(14);
+}
+
+/* Search
+===================================================*/
+.search {
+    float: left;
+}
+
+/* Menu
+===================================================*/
+.menu {
+    @extend .group;
+    float: left;
+}
+
+.menu_item {
+    float: left;
+    border-right: 1px solid $invText;
+
+    > a {
+        display: block;
+
+        font-weight: 700;
+        color: $invText;
+
+        // padding: 0.4em 1em;
+
+        // border-top:    .3em solid transparent;
+        // border-bottom: .3em solid transparent;
+
+        &:hover, &:focus {
+            color: #fff;
+        }
+    }
+
+    // &:nth-child(3n) > a:hover {
+    //     border-bottom-color: $colorAlpha;
+    // }
+
+    // &:nth-child(3n+1) > a:hover {
+    //     border-bottom-color: $colorBeta;
+    // }
+
+    // &:nth-child(3n+2) > a:hover {
+    //     border-bottom-color: $colorGamma;
+    // }
+}

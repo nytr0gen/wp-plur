@@ -1,0 +1,25 @@
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+@mixin bp($point) {
+    @if $point == papa-bear {
+        @media (max-width: 1600px) { @content; }
+    }
+    @else if $point == mama-bear {
+        @media (max-width: 1250px) { @content; }
+    }
+    @else if $point == baby-bear {
+        @media (max-width: 700px)  { @content; }
+    }
+}
+
+
+@mixin font-stack {
+    font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-stack-extra {
+    font-family: Lobster Two, Verdana, Tahoma, Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,700&text=%26);
+
+html {
+    color: $textColor;
+    @include font-stack;
+}
+
+h1, h2, h3, h4 {
+    @include font-stack-extra;
+}
+
+// Compass Vertical Rhythm
+$base-font-size: 18px;
+$base-line-height: 27px;
+$rhythm-unit: "rem";
+@include establish-baseline;
+
+a {
+    color: $colorAlpha;
+    text-decoration: none;
+    //transition: .1s opacity ease;
+
+    &:hover, &:focus {
+        color: $colorBeta;
+    }
+
+    &:active {
+        @include opacity(.8);
+    }
+}
+
+h1 {
+    @include adjust-font-size-to(38px); //main titles
+}
+
+h2 {
+    @include adjust-font-size-to(30px); // secondary titles
+}
+
+h3 {
+    @include adjust-font-size-to(16px); // menu, nav headings
+}
+
+h4 {
+    @include adjust-font-size-to(13px);
+}

@@ -1,0 +1,52 @@
+*, *:before, *:after {
+    @include box-sizing(inherit);
+}
+
+html {
+    @include box-sizing(border-box);
+
+    background: #ddd;
+    @include background(
+        linear-gradient(rgba(#000, 0), rgba(#000, .5)),
+        url(http://subtlepatterns.com/patterns/struckaxiom.png)
+    );
+}
+
+body {
+    background: url(images/bg.jpg) no-repeat top center;
+    background-size: contain;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.group {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    zoom: 1; // IE 6/7
+}
+
+.wrap {
+    margin: 0 auto;
+
+    max-width: 60em;
+    @include bp(mama-bear) {
+        max-width:  50em;
+    }
+
+    @include transition(.6s max-width ease-in);
+}
+
+.wrap-pad {
+    padding-right: 20px;
+    padding-left:  20px;
+}

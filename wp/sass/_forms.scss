@@ -1,0 +1,81 @@
+input, textarea, select {
+    @include font-stack;
+    color: $textColor;
+}
+
+input {
+    @include rhythm(.25, .25);
+
+    height: rhythm(1.5);
+
+    @include box-shadow(0 .3em .4em rgba(#000, .2) inset);
+}
+
+input[type=text],
+input[type=password],
+input[type=search] {
+    background: #555;
+    padding-left: .3em;
+    padding-right: .4em;
+
+    border: 1px solid transparent;
+    @include border-radius(10px);
+
+    color: $bgColor;
+
+    @include transition(
+        .4s background ease,
+        .4s border     ease,
+        .4s color      ease
+    );
+
+    &:focus {
+        background:   $bgColor;
+        border-color: $colorAccent;
+
+        color: $textColor;
+    }
+
+    &.search_query {
+        background: tint(#000, 14%);
+        background: rgba(#fff, .14);
+
+        &:focus {
+            background: $bgColor;
+            border-color: transparent;
+        }
+    }
+}
+
+input[type=submit] {
+    background: $colorAccent;
+    padding-left:  .6em;
+    padding-right: .6em;
+
+    color: $bgColor;
+    @include adjust-font-size-to(15px);
+    font-weight: 700;
+
+    @include border-radius(20px);
+
+    @include transition(
+        .3s box-shadow ease-out,
+        .3s background ease-in
+    );
+
+    &:hover, &:focus {
+        @include box-shadow(0 0 .8em .4em rgba(#000, .3) inset);
+    }
+
+    &:active {
+        background: #000;
+    }
+
+    &.search_submit {
+        background: $colorAlpha;
+
+        &:active {
+            background: #000;
+        }
+    }
+}
