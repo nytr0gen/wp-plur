@@ -1,0 +1,19 @@
+$fontSize: 15px;
+$phi: 1.618033;
+
+$bgColor: #fff;
+$altBgColor: #ddd;
+
+$textColor: #3f3f3f;
+$inverseColor: invert($textColor);
+
+$colorAlpha: #1391C1;// http://goo.gl/WIuMEO
+$colorBeta: #F43059;
+
+$anchorColor: $colorAlpha;
+$anchorHover: darken($textColor, 15%);
+
+$post_headColor: darken(invert($textColor), 10%);
+$post_headHover: $textColor;
+
+$mainBorder: $colorBeta;
